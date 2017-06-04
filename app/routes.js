@@ -41,7 +41,7 @@ module.exports = (app, passport) => {
 			res.json({"message": "The numbers you entered are not valid"});
 		} else {
 			let result = req.body.num1 + req.body.num2;
-			res.json({"message": "The action was successful", "result": `${result}`});
+			res.json({"message": "The action was successful", "result": result});
 		}		
 	});
 
@@ -52,7 +52,7 @@ module.exports = (app, passport) => {
 			res.json({"message": "The numbers you entered are not valid"});
 		} else {
 			let result = req.body.num1 / req.body.num2;
-			res.json({"message": "The action was successful", "result": `${result}`});
+			res.json({"message": "The action was successful", "result": result});
 		}
 
 	});
@@ -64,7 +64,7 @@ module.exports = (app, passport) => {
 			res.json({"message": "The numbers you entered are not valid"});
 		} else {
 			let result = req.body.num1 * req.body.num2;
-			res.json({"message": "The action was successful", "result": `${result}`});
+			res.json({"message": "The action was successful", "result": result});
 		}
 
 	});
