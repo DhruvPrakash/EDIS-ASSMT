@@ -45,7 +45,7 @@ module.exports = (app, passport) => {
 		}		
 	});
 
-	app.post('/divide', (req, res) => {
+	app.post('/divide', auth, (req, res) => {
 		
 		let err = hasError(req.body.num1, req.body.num2, 'divide');
 		if (err) {
@@ -57,7 +57,7 @@ module.exports = (app, passport) => {
 
 	});
 
-	app.post('/multiply', (req, res) => {
+	app.post('/multiply', auth, (req, res) => {
 		
 		let err = hasError(req.body.num1, req.body.num2, 'divide');
 		if (err) {
